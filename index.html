@@ -7,175 +7,156 @@
     <title>Document</title>
     <link rel="stylesheet" href="reset.css">
     <script src="index.js"></script>
-    <style>
-        table {
-            caption-side: top;
-            border-collapse: collapse;
-            border: solid 5px teal;
-            height: 100%;
-            width: 100%;
-        }
-        table th, td {
-            height: 7vh;
-            width: 14vw;
-            border: solid 1px rosybrown;
-        }
-        input {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            border: none;
-            text-align: center;
-        }
-        button {
-            height: 100%;
-        }
-        select option {
-            height: 100%;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <div>
-        <select name="slcolumn" id="slcolumn" required>
-            <option>Chọn cột</option>
-            <option value="thu2">Thứ 2</option>
-            <option value="thu3">Thứ 3</option>
-            <option value="thu4">Thứ 4</option>
-            <option value="thu5">Thứ 5</option>
-            <option value="thu6">Thứ 6</option>
-            <option value="thu7">Thứ 7</option>
-        </select>
-        <select name="" id="cellstart" required>
-            <option>Chọn ô bắt đầu</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-        <select name="" id="cellend" required>
-            <option>Chọn ô kết thúc</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-        <button onclick="gophang()">Gộp hàng</button>
+<body onload="TKB()">
+    <div id="container">
+        <table>
+            <tr>
+                <th>Tiết</th>
+                <th>Thứ 2</th>
+                <th>Thứ 3</th>
+                <th>Thứ 4</th>
+                <th>Thứ 5</th>
+                <th>Thứ 6</th>
+                <th>Thứ 7</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td class="thu2"><input type="text"></td>
+                <td class="thu3"><input type="text"></td>
+                <td class="thu4"><input type="text"></td>
+                <td class="thu5"><input type="text"></td>
+                <td class="thu6"><input type="text"></td>
+                <td class="thu7"><input type="text"></td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="thu2"><input type="text"></td>
+                <td class="thu3"><input type="text"></td>
+                <td class="thu4"><input type="text"></td>
+                <td class="thu5"><input type="text"></td>
+                <td class="thu6"><input type="text"></td>
+                <td class="thu7"><input type="text"></td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="thu2"><input type="text"></td>
+                <td class="thu3"><input type="text"></td>
+                <td class="thu4"><input type="text"></td>
+                <td class="thu5"><input type="text"></td>
+                <td class="thu6"><input type="text"></td>
+                <td class="thu7"><input type="text"></td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="thu2"><input type="text"></td>
+                <td class="thu3"><input type="text"></td>
+                <td class="thu4"><input type="text"></td>
+                <td class="thu5"><input type="text"></td>
+                <td class="thu6"><input type="text"></td>
+                <td class="thu7"><input type="text"></td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="thu2"><input type="text"></td>
+                <td class="thu3"><input type="text"></td>
+                <td class="thu4"><input type="text"></td>
+                <td class="thu5"><input type="text"></td>
+                <td class="thu6"><input type="text"></td>
+                <td class="thu7"><input type="text"></td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="thu2"><input type="text"></td>
+                <td class="thu3"><input type="text"></td>
+                <td class="thu4"><input type="text"></td>
+                <td class="thu5"><input type="text"></td>
+                <td class="thu6"><input type="text"></td>
+                <td class="thu7"><input type="text"></td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="thu2"><input type="text"></td>
+                <td class="thu3"><input type="text"></td>
+                <td class="thu4"><input type="text"></td>
+                <td class="thu5"><input type="text"></td>
+                <td class="thu6"><input type="text"></td>
+                <td class="thu7"><input type="text"></td>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td class="thu2"><input type="text"></td>
+                <td class="thu3"><input type="text"></td>
+                <td class="thu4"><input type="text"></td>
+                <td class="thu5"><input type="text"></td>
+                <td class="thu6"><input type="text"></td>
+                <td class="thu7"><input type="text"></td>
+            </tr>
+            <tr>
+                <th>9</th>
+                <td class="thu2"><input type="text"></td>
+                <td class="thu3"><input type="text"></td>
+                <td class="thu4"><input type="text"></td>
+                <td class="thu5"><input type="text"></td>
+                <td class="thu6"><input type="text"></td>
+                <td class="thu7"><input type="text"></td>
+            </tr>
+            <tr>
+                <th>10</th>
+                <td class="thu2"><input type="text"></td>
+                <td class="thu3"><input type="text"></td>
+                <td class="thu4"><input type="text"></td>
+                <td class="thu5"><input type="text"></td>
+                <td class="thu6"><input type="text"></td>
+                <td class="thu7"><input type="text"></td>
+            </tr>
+        </table>
+        <div class="iconmenu" onclick="openMenu()">⇅</div>
+        <div id="menu" style="display: none;">
+            <div>
+                <button onclick="saveTKB()">Lưu</button>
+                <button onclick="openGophang()">Gộp hàng</button>
+                <div style="display: none;" id="gophang">
+                    <select name="slcolumn" id="slcolumn">
+                        <option>Chọn cột</option>
+                        <option value="thu2">Thứ 2</option>
+                        <option value="thu3">Thứ 3</option>
+                        <option value="thu4">Thứ 4</option>
+                        <option value="thu5">Thứ 5</option>
+                        <option value="thu6">Thứ 6</option>
+                        <option value="thu7">Thứ 7</option>
+                    </select>
+                    <select name="" id="cellstart">
+                        <option>Chọn ô bắt đầu</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <select name="" id="cellend">
+                        <option>Chọn ô kết thúc</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <input type="submit" value="OK" onclick="gophang()">
+                </div>
+            </div>
+        </div>
     </div>
-    <table>
-        <caption><h3>Thời khoa biểu</h3></caption>
-        <tr>
-            <th>Tiết</th>
-            <th>Thứ 2</th>
-            <th>Thứ 3</th>
-            <th>Thứ 4</th>
-            <th>Thứ 5</th>
-            <th>Thứ 6</th>
-            <th>Thứ 7</th>
-        </tr>
-        <tr>
-            <th>1</th>
-            <td class="thu2"><input type="text"></td>
-            <td class="thu3"><input type="text"></td>
-            <td class="thu4"><input type="text"></td>
-            <td class="thu5"><input type="text"></td>
-            <td class="thu6"><input type="text"></td>
-            <td class="thu7"><input type="text"></td>
-        </tr>
-        <tr>
-            <th>2</th>
-            <td class="thu2"><input type="text"></td>
-            <td class="thu3"><input type="text"></td>
-            <td class="thu4"><input type="text"></td>
-            <td class="thu5"><input type="text"></td>
-            <td class="thu6"><input type="text"></td>
-            <td class="thu7"><input type="text"></td>
-        </tr>
-        <tr>
-            <th>3</th>
-            <td class="thu2"><input type="text"></td>
-            <td class="thu3"><input type="text"></td>
-            <td class="thu4"><input type="text"></td>
-            <td class="thu5"><input type="text"></td>
-            <td class="thu6"><input type="text"></td>
-            <td class="thu7"><input type="text"></td>
-        </tr>
-        <tr>
-            <th>4</th>
-            <td class="thu2"><input type="text"></td>
-            <td class="thu3"><input type="text"></td>
-            <td class="thu4"><input type="text"></td>
-            <td class="thu5"><input type="text"></td>
-            <td class="thu6"><input type="text"></td>
-            <td class="thu7"><input type="text"></td>
-        </tr>
-        <tr>
-            <th>5</th>
-            <td class="thu2"><input type="text"></td>
-            <td class="thu3"><input type="text"></td>
-            <td class="thu4"><input type="text"></td>
-            <td class="thu5"><input type="text"></td>
-            <td class="thu6"><input type="text"></td>
-            <td class="thu7"><input type="text"></td>
-        </tr>
-        <tr>
-            <th>6</th>
-            <td class="thu2"><input type="text"></td>
-            <td class="thu3"><input type="text"></td>
-            <td class="thu4"><input type="text"></td>
-            <td class="thu5"><input type="text"></td>
-            <td class="thu6"><input type="text"></td>
-            <td class="thu7"><input type="text"></td>
-        </tr>
-        <tr>
-            <th>7</th>
-            <td class="thu2"><input type="text"></td>
-            <td class="thu3"><input type="text"></td>
-            <td class="thu4"><input type="text"></td>
-            <td class="thu5"><input type="text"></td>
-            <td class="thu6"><input type="text"></td>
-            <td class="thu7"><input type="text"></td>
-        </tr>
-        <tr>
-            <th>8</th>
-            <td class="thu2"><input type="text"></td>
-            <td class="thu3"><input type="text"></td>
-            <td class="thu4"><input type="text"></td>
-            <td class="thu5"><input type="text"></td>
-            <td class="thu6"><input type="text"></td>
-            <td class="thu7"><input type="text"></td>
-        </tr>
-        <tr>
-            <th>9</th>
-            <td class="thu2"><input type="text"></td>
-            <td class="thu3"><input type="text"></td>
-            <td class="thu4"><input type="text"></td>
-            <td class="thu5"><input type="text"></td>
-            <td class="thu6"><input type="text"></td>
-            <td class="thu7"><input type="text"></td>
-        </tr>
-        <tr>
-            <th>10</th>
-            <td class="thu2"><input type="text"></td>
-            <td class="thu3"><input type="text"></td>
-            <td class="thu4"><input type="text"></td>
-            <td class="thu5"><input type="text"></td>
-            <td class="thu6"><input type="text"></td>
-            <td class="thu7"><input type="text"></td>
-        </tr>
-    </table>
 </body>
 </html>
