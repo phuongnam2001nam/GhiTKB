@@ -22,24 +22,18 @@ function gophang(slcolumn, cellstart, cellend) {
         localStorage.setItem('i', parseInt(dem)+1);
         localStorage.setItem(localStorage.getItem('i'), JSON.stringify(gophang));
     }
-    var b1= b, c1= c;
+    var khoangcach= Math.abs(c- b+ 1);
     if(b< c) {
-        var khoangcach= c- b+ 1;
-        var gps= document.getElementsByClassName(a)[b-1];
-        gps.setAttribute('rowspan', khoangcach.toString());
-        for(var i= 0; i< khoangcach- 1; i++) {
-            document.getElementsByClassName(a)[b1].style.display= 'none';
-            b1++;
-        }
+        var bc= b;
     }
-    if(b> c) {
-        var khoangcach= b- c+ 1;
-        var gps= document.getElementsByClassName(a)[c-1];
-        gps.setAttribute('rowspan', khoangcach.toString());
-        for(var i= 0; i< khoangcach-1; i++) {
-            document.getElementsByClassName(a)[c1].style.display= 'none';
-            c1++;
-        }
+    else {
+        var bc= c;
+    }
+    document.getElementsByClassName(a)[bc-1].setAttribute('rowspan', khoangcach.toString());
+    var bcd= bc;
+    for(var i= 0; i< khoangcach- 1; i++) {
+        document.getElementsByClassName(a)[bcd].style.display= 'none';
+        bcd++;
     }
 }
 //
@@ -80,16 +74,23 @@ function saveTKB() {
     }
     localStorage.setItem('TKB', JSON.stringify(TKB));
 }
-function TKB() {
+function loadTKB(bien) {
     if(localStorage.getItem('TKB')!== null) {
         var TKB= JSON.parse(localStorage.getItem('TKB'));
         for(var i= 0; i< 6; i++) {
             var a= i+2;
             var thu= "thu"+ a.toString();
             for(var j= 0; j< 10; j++) {
-                var b= j+1;
-                document.getElementsByClassName(thu)[j].firstElementChild.value= TKB.TKB[i][j];
-                console.log(document.getElementsByClassName(thu)[j].firstElementChild.value, TKB.TKB[i][j]);
+                if(bien== '1') {
+                    document.getElementsByClassName(thu)[j].firstElementChild.remove();
+                    document.getElementsByClassName(thu)[j].innerHTML= TKB.TKB[i][j];
+                }
+                if(bien== '0') {
+                    document.getElementsByClassName(thu)[j].innerHTML= "";
+                    document.getElementsByClassName(thu)[j].appendChild(document.createElement('textarea'));
+                    document.getElementsByClassName(thu)[j].firstChild.value= TKB.TKB[i][j];
+                }
+                console.log(document.getElementsByClassName(thu)[j].value, TKB.TKB[i][j]);
             }
         }
     }
@@ -102,7 +103,6 @@ function TKB() {
             gophang(x, y, z);
         }
     }
-    alert('Xoay màn hình chứ không là méo dùng được đâu nhá! Ghét-.-');
 }
 function clearTKB() {
     confirm('Bạn sẽ mất vĩnh viễn thời khoa biểu hiện tại.', window.localStorage.clear());
