@@ -103,5 +103,9 @@ function TKB() {
         }
     }
 }
+function clearTKB() {
+    confirm('Bạn sẽ mất vĩnh viễn thời khoa biểu hiện tại.', window.localStorage.clear());
+    window.location.reload();
+}
 
 
