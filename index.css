@@ -56,5 +56,7 @@ select option {
         display: block;
         background-color: yellowgreen;
         color: black;
+        height: 100vh;
+        width: 100vw;
     }
 }
