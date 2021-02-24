@@ -34,3 +34,8 @@ select option {
     position: fixed;
     bottom: 0vh;
 }
+@media screen and (orientation:portrait) {
+    html {
+        display: none;
+    }
+}

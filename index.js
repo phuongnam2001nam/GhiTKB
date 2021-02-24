@@ -102,6 +102,7 @@ function TKB() {
             gophang(x, y, z);
         }
     }
+    alert('Xoay màn hình chứ không là méo dùng được đâu nhá! Ghét-.-');
 }
 function clearTKB() {
     confirm('Bạn sẽ mất vĩnh viễn thời khoa biểu hiện tại.', window.localStorage.clear());
