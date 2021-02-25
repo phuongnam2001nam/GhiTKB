@@ -73,6 +73,7 @@ function saveTKB() {
         ]
     }
     localStorage.setItem('TKB', JSON.stringify(TKB));
+    window.location.reload();
 }
 function loadTKB(bien) {
     if(localStorage.getItem('TKB')!== null) {
