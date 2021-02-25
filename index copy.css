@@ -1,0 +1,51 @@
+table {
+    caption-side: top;
+    border-collapse: collapse;
+    border: solid 5px teal;
+    height: 100vh;
+    width: 100vw;
+}
+table th, td {
+    height: 7vh;
+    width: 14vw;
+    border: solid 1px rosybrown;
+    text-align: center;
+}
+td textarea {
+    display: table;
+    resize: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+button {
+    height: 100%;
+}
+select option {
+    height: 100%;
+}
+/*  */
+.iconmenu {
+    position: fixed;
+    font-size: 2em;
+    right: 0vw;
+    bottom: 0vh;
+}
+#menu {
+    position: fixed;
+    bottom: 0vh;
+}
+#canhbao {
+    display: none;
+}
+@media screen and (orientation:portrait) {
+    #container {
+        display: none;
+    }
+    #canhbao {
+        display: block;
+        background-color: yellowgreen;
+        color: black;
+    }
+}
