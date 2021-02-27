@@ -1,4 +1,4 @@
-table {
+/* table {
     caption-side: top;
     border-collapse: collapse;
     border: solid 5px teal;
@@ -25,7 +25,6 @@ button {
 select option {
     height: 100%;
 }
-/*  */
 .iconmenu {
     position: fixed;
     font-size: 2em;
@@ -48,4 +47,4 @@ select option {
         background-color: yellowgreen;
         color: black;
     }
-}
+} */
